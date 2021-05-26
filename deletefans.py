@@ -25,7 +25,7 @@ fannum = infolist['data']['follower']
 if fannum > 1000:
     neednum = 20
     fansecond = neednum*15
-    print("因系统限制，只能获取前20页粉丝内容，预计执行获取任务需要：" + str(fansecond) + "秒")
+    print("Due to system limitations,only the first 20 pages of fan content can be obtained.It is estimated that it is necessary to perform the acquisition task" + str(fansecond) + "seconds")
     while True:
         if page <= neednum:
             num = 0
@@ -47,7 +47,7 @@ else:
     neednum = int(fannum / 50)
     residuenum = fannum - neednum * 50
     fansecond = (neednum + 1) * 15
-    print("预计执行获取任务需要" + str(fansecond) + "秒")
+    print("It is estimated that it is necessary to perform the acquisition task" + str(fansecond) + "seconds")
     while True:
         if page <= neednum:
             num = 0
@@ -87,7 +87,7 @@ if fannum > 1000:
     deltime = fannum*5
 else:
     deltime = fannum*5
-print("粉丝获取完成，准备删除，预计执行删除任务需要" + str(deltime) + "秒")
+print("Fans get complete,ready to delete.It is estimated that it will be necessary to perform the deletion task" + str(deltime) + "seconds")
 headers = {
     "cookie": cookie,
     "referer": "https://space.bilibili.com/"+str(uid)+"/fans/fans",
@@ -112,4 +112,4 @@ while True:
         break
     else:
         delnum += 1
-print("执行完成，请手动检查执行结果")
+print("Execution completed, please check the execution result manually.")
