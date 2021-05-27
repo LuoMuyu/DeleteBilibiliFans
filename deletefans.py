@@ -7,8 +7,8 @@ import json
 import re
 
 cookie = input("Please input your account cookie:")
-DedeUserID = re.findall("DedeUserID=[0-9]*",cookie,re.S)[0]
-uid = re.findall("[0-9]*",DedeUserID,re.S)[0]
+DedeUserID = re.findall("DedeUserID=[0-9]{1,}",cookie,re.S)[0]
+uid = re.findall("[0-9]{1,}",DedeUserID,re.S)[0]
 cookies = {}
 for line in cookie.split(";"):
     if line.find("=") != -1:
